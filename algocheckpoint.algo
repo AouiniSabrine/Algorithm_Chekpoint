@@ -1,0 +1,45 @@
+
+VAR
+
+ch: CHAR;
+Nbc: INTEGER;
+Nbv: INTEGER
+Nbw: INTEGER
+
+BEGIN
+ Nbc:=0;
+
+WHILE (ch <>'.') DO
+ ch:= Write("enter your character here please.");
+ Read ("ch");
+ Nbc:= Nbc + 1;
+END_WHILE
+
+ 
+vowels = ['a','A','e','E','i','I','o','O','u','U','y','Y']
+ Nbv:= 0;
+WHILE (ch <>'.') DO
+ ch:= Write("enter your character here please.");
+ Read ("ch");
+ IF (ch = vowels) THEN
+ Nbv:= Nbv + 1;
+ END_IF 
+END_WHILE
+
+ Nbw:= 1;
+WHILE (ch <>'.') DO
+ ch:= Write("enter your character here please.");
+ Read ("ch");
+ IF (Ch = " ") THEN
+  Nbw:= Nbw+1
+ END_IF  
+END_WHILE
+
+Write(Number of characters :',Nbc,'Number of vowels :',Nbv,'Number of words:',Nbw') ;
+
+ END_IF   
+  
+      
+END
+
+
