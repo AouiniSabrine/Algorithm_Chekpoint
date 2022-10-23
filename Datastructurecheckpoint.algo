@@ -1,0 +1,69 @@
+ // Solution Number 1:
+ 
+ ALGORITHM Array
+VAR
+   Set1 : ARRAY_OF INTEGER[50];
+   Set2 : ARRAY_OF INTEGER[50];
+   i : INTEGER;
+   j : INTEGER;
+   sumd , sumo : INTEGER := 0;
+BEGIN
+  Set1 := WRITE("Enter Set1")
+    READ(Set1)
+  Set2 := WRITE("Enter Set2")
+    READ(Set2)
+  
+FOR i FROM 0 TO length(Set1)  DO
+   FOR j FROM 0 TO length(Set2) DO
+    IF (Set1[i] <> Set2[j]) THEN
+        sumd := Set1[i] + Set2[j];  
+    END_IF
+   END_FOR
+END_FOR
+
+FOR i FROM 0 TO length(Set1)  DO
+   FOR j FROM 0 TO length(Set2) DO
+      IF (Set1[i] == Set2[j]) THEN
+       sumo := Set1[i] + Set2[j];  
+                
+    END_IF
+   END_FOR
+END_FOR
+  
+END
+
+//Solution Number 2: 
+
+ALGORITHM Hash table
+VAR 
+   Set1 : HASH_TABLE<INTEGER,INTEGER>;
+   Set2 : HASH_TABLE<INTEGER,INTEGER>;
+   i : INTEGER;
+   j : INTEGER;
+   sumd , sumo : INTEGER := 0;
+   
+
+BEGIN
+
+  Set1 := WRITE("Enter Set1")
+    READ(Set1)
+  Set2 := WRITE("Enter Set2")
+    READ(Set2)
+ FOR i FROM 0 TO length(Set1)  DO
+   FOR j FROM 0 TO length(Set2) DO
+      IF (Set1 keys == Set2 keys) THEN
+        Sumo = Sumo + 1;
+      END_IF 
+   END_FOR
+ END_FOR
+
+ 
+ FOR i FROM 0 TO length(Set1)  DO
+   FOR j FROM 0 TO length(Set2) DO
+     IF (Set1 keys <> Set2 keys) THEN
+        Sumd = Sumd + 1;
+     END_IF
+   END_FOR
+ END_FOR
+
+ END
